@@ -98,6 +98,10 @@ To add the Virtual Machine SID to a .vhd or .avhd file, follow these steps:
     ```  
 
 4. Start the virtual machine.
+5. If you have an iso file attached for installation and the virtual machine always didn't start after the previous steps, may be you also need to give permissions to the iso file in the same way:
+    ```console
+    icacls <Path of .iso file> /grant "NT VIRTUAL MACHINE\ <Virtual Machine ID from step 1> ":(F)
+    ```
 
 ## More information
 
